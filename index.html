@@ -5,8 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing-Page</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/efabe25798.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <script></script>
+    <header class="padding-responsive">
+      <h1>LOGO</h1>
+
+      <nav class="header-nav">
+        <a href="" class="active">
+          Home
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+
+        <a href="">
+          About Us
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="">
+          Services
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="">
+          Blog
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+        <a href="">
+          Contact
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </nav>
+
+      <div class="circle icon">
+        <span class="line top"></span>
+        <span class="line middle"></span>
+        <span class="line bottom"></span>
+      </div>
+    </header>
+
+    <main class="padding-responsive">
+      <section id="home ">
+        <div class="home-content">
+          <p class="">Lorem, ipsum dolor.</p>
+
+          <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam,
+            obcaecati? Maxime, optio eaque eligendi ullam doloremque ut ab
+            dolores eveniet!
+          </p>
+          <a href="#">
+            <span class="btn-bassic">Pelajari Lebih Lanjut</span>
+          </a>
+        </div>
+
+        <div class="home-img">
+          <img
+            src="assets/img/home.jpg"
+            alt="assets/img/home.jpg"
+            loading="lazy"
+          />
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const toggles = document.getElementsByClassName("icon")[0];
+      const header_nav = document.getElementsByClassName("header-nav")[0];
+      let isNavVisible = false;
+
+      toggles.addEventListener("click", function () {
+        toggles.classList.toggle("close");
+
+        if (isNavVisible) {
+          header_nav.classList.remove("header-nav-active"); // Hapus class nav-active
+          header_nav.classList.add("header-nav-hidden"); // Tambah class nav-hidden (slide-out)
+        } else {
+          header_nav.classList.remove("header-nav-hidden"); // Hapus class nav-hidden
+          header_nav.classList.add("header-nav-active"); // Tambah class nav-active (slide-in)
+        }
+        isNavVisible = !isNavVisible; // Balik status nav
+      });
+    </script>
   </body>
 </html>

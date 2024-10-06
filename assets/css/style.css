@@ -1,0 +1,290 @@
+:root {
+  --primary-color: #a594f9; /* Warna utama */
+  --background-color: #f9f9f9; /* Warna latar belakang */
+  --text-color: #333; /* Warna teks utama */
+
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px;
+  --border-radius-full: 50%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* padding responsive */
+.padding-responsive {
+  padding: 0 20px;
+}
+/* padding responsive */
+
+/* header */
+header {
+  background: white;
+  box-shadow: 0 0 5px 0 rgba(77, 77, 77, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 20;
+}
+header h1 {
+  color: var(--primary-color);
+  font-weight: 900;
+}
+
+/* tombol burger */
+.circle {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  padding: 2px;
+  border-radius: 100%;
+}
+.line {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: var(--primary-color);
+  border-radius: 8px;
+  transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+}
+.top {
+  top: 18%;
+}
+.middle {
+  top: 48%;
+}
+.bottom {
+  top: 78%;
+}
+.icon.close .top {
+  transform: rotate(45deg);
+  top: 48%;
+}
+.icon.close .middle,
+.icon.close .bottom {
+  transform: rotate(-45deg);
+  top: 48%;
+}
+/* tombol burger */
+
+/* nav */
+.header-nav {
+  background: white;
+  box-shadow: 0 0 5px 0 rgba(77, 77, 77, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  padding: 10px;
+  width: 180px;
+  max-height: 280px;
+  z-index: 10;
+  gap: 8px;
+}
+
+.header-nav-active {
+  animation: slideIn-right 0.6s forwards; /* Menjalankan animasi slide-in */
+}
+.header-nav-hidden {
+  animation: slideOut-right 0.6s forwards; /* Menjalankan animasi slide-out */
+}
+
+.header-nav a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-medium);
+}
+.header-nav a.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+.header-nav a.active i {
+  color: white;
+}
+.header-nav a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+.header-nav a:hover i {
+  color: white;
+}
+
+header .btn {
+  display: none;
+}
+
+.header-nav a.btn {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+/* nav */
+/* header */
+
+/* main */
+main {
+  width: 100%;
+  box-sizing: border-box;
+}
+section {
+  padding-top: 80px;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* home */
+#home {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 50%;
+}
+.home-content h1 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+.home-img {
+  height: 50%;
+}
+.home-img img {
+  object-fit: cover;
+  width: 100%;
+}
+/* home */
+
+/* main */
+
+/* btn */
+.btn-border {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 6px;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-bassic {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 6px 15px;
+  border-radius: var(--border-radius-medium);
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+.btn-bassic:hover {
+  opacity: 0.75;
+}
+/* btn */
+
+/* animation */
+@keyframes slideIn-right {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 10px;
+  }
+}
+
+@keyframes slideOut-right {
+  0% {
+    right: 10px;
+  }
+  100% {
+    right: -50%;
+  }
+}
+/* animation */
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+}
+
+/* Tablet (Urutan tetap sama) */
+@media (min-width: 768px) {
+  .padding-responsive {
+    padding: 0 60px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .header-nav {
+    display: flex;
+    box-shadow: 0 0 0;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    gap: 20px;
+    padding: 0;
+  }
+  .header-nav a {
+    padding: 0;
+  }
+
+  .header-nav a:hover {
+    background-color: white;
+    color: var(--primary-color);
+  }
+
+  .header-nav a.active {
+    background-color: white;
+    color: var(--primary-color);
+  }
+
+  .header-nav a i {
+    display: none;
+  }
+
+  .header-nav a.btn {
+    display: none;
+  }
+
+  header .btn {
+    display: flex;
+    margin-top: 0;
+  }
+}
+
+/* Desktop (Pastikan ini di bawah) */
+@media (min-width: 992px) {
+  .padding-responsive {
+    padding: 0 90px;
+  }
+}
