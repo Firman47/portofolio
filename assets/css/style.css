@@ -182,6 +182,11 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 30px;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 .home-content {
@@ -199,12 +204,14 @@ section {
 }
 
 .home-img {
-  width: 350px;
-  min-width: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
 }
 .home-img img {
   width: 100%;
   object-fit: cover;
+  max-width: 500px;
 }
 
 .home-cards {
@@ -373,7 +380,20 @@ footer.padding-responsive {
   }
   .home-container {
     display: flex;
+    flex-direction: row;
     gap: 20px;
+  }
+  .home-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home-content p {
+    width: 60%;
+  }
+  .home-img {
+    width: 50%;
   }
 }
 
