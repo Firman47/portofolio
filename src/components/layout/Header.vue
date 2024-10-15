@@ -2,7 +2,7 @@
   <header
     class="w-full h-16 px-responsive flex items-center justify-between bg-base-100/95 border border-base-200 shadow-sm fixed z-20"
   >
-    <h1 class="text-2xl font-black">Logo</h1>
+    <h1 class="text-2xl font-black">Firman</h1>
 
     <!-- mobile -->
     <nav
