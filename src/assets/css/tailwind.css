@@ -6,4 +6,8 @@
   body {
     @apply w-full overflow-x-hidden;
   }
+  .px-responsive {
+    @apply px-4 sm:px-12 md:px-32;
+    box-sizing: border-box;
+  }
 }

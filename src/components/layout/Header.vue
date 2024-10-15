@@ -1,31 +1,32 @@
 <template>
   <header
-    class="w-full h-16 px-responsive flex items-center justify-between bg-base-200 relative"
+    class="w-full h-16 px-responsive flex items-center justify-between bg-base-100 border border-base-200 shadow-sm fixed z-20"
   >
     <h1 class="text-2xl font-black">Logo</h1>
 
+    <!-- mobile -->
     <nav
       :class="[
-        'flex flex-col gap-4 w-60 p-4 sm:p-0 items-center justify-center rounded-md absolute bg-base-200  top-20 transition-all duration-500 sm:w-auto sm:flex-row sm:static sm:bg-white/0 sm:hidden',
+        'z-20 mobile flex flex-col gap-4 w-60 p-4 sm:p-0 items-center justify-center  rounded-lg absolute bg-base-100 border border-base-200 shadow-md  top-20 transition-all duration-500 sm:w-auto sm:flex-row sm:static sm:bg-white/0 sm:hidden',
         isActive ? 'right-4' : '-right-full',
       ]"
     >
-      <div class="flex items-center justify-between btn btn-block btn-primary">
+      <div class="btn-nav btn-nav-active">
         <a href="" class=""> Home </a>
-        <right class="w-4 h-4 fill-current" />
+        <RightIcon class="w-5 h-5 fill-current" />
       </div>
 
-      <div class="flex items-center justify-between btn btn-block btn-ghost">
+      <div class="btn-nav">
         <a href="" class="">About </a>
-        <right class="w-4 h-4 fill-current" />
+        <RightIcon class="w-5 h-5 fill-current" />
       </div>
-      <div class="flex items-center justify-between btn btn-block btn-ghost">
+      <div class="btn-nav">
         <a href="" class="">Project </a>
-        <right class="w-4 h-4 fill-current" />
+        <RightIcon class="w-5 h-5 fill-current flex" />
       </div>
-      <div class="flex items-center justify-between btn btn-block btn-ghost">
+      <div class="btn-nav">
         <a href="" class="">Contact </a>
-        <right class="w-4 h-4 fill-current" />
+        <RightIcon class="w-5 h-5 fill-current" />
       </div>
 
       <label class="grid cursor-pointer place-items-center">
@@ -67,27 +68,28 @@
         </svg>
       </label>
     </nav>
+    <!-- mobile -->
 
     <nav
       :class="[
-        'flex flex-col gap-4 w-60 p-4 sm:p-0 items-center justify-center rounded-md absolute bg-base-200  top-20 transition-all duration-500 sm:w-auto sm:flex-row sm:static sm:bg-white/0 hidden sm:flex',
+        ' flex-col gap-4 w-60 p-4 sm:p-0 items-center justify-center rounded-md absolute bg-base-200  top-20 transition-all duration-500 sm:w-auto sm:flex-row sm:static sm:bg-white/0 hidden sm:flex',
         isActive ? 'right-4' : '-right-full',
       ]"
     >
-      <div class="btn btn-primary">
+      <div class="btn-nav btn-nav-active">
         <a href="" class=""> Home </a>
       </div>
 
-      <div class="btn btn-ghost">
+      <div class="btn-nav">
         <a href="" class="">About </a>
       </div>
-      <div class="btn btn-ghost">
+      <div class="btn-nav">
         <a href="" class="">Project </a>
       </div>
-      <div class="btn btn-ghost">
+      <div class="btn-nav">
         <a href="" class="">Contact </a>
       </div>
-
+      <div class="w-[0.8px] h-8 rounded-sm bg-neutral"></div>
       <label class="grid cursor-pointer place-items-center">
         <input
           type="checkbox"
@@ -127,8 +129,9 @@
         </svg>
       </label>
     </nav>
+
     <label class="swap swap-rotate sm:hidden">
-      <input type="checkbox" @click="togle" />
+      <input type="checkbox" @click="togle" v-model="isActive" />
 
       <!-- hamburger icon -->
       <svg
@@ -157,32 +160,57 @@
       </svg>
     </label>
   </header>
+
+  <div
+    :class="[
+      'bg-base-200/85 w-full h-screen fixed top-0 sm:hidden z-10 duration-75',
+      isActive ? 'flex' : 'hidden',
+    ]"
+    @click="togle"
+  ></div>
 </template>
 
 <style>
-.px-responsive {
-  @apply px-4 sm:px-20 md:px-32;
-  box-sizing: border-box;
+.mobile .btn-nav {
+  @apply flex items-center justify-between w-full p-3 py-2 rounded-md;
+}
+.mobile .btn-nav:hover {
+  @apply bg-neutral text-white;
+}
+.mobile .btn-nav.btn-nav-active {
+  @apply bg-neutral text-white;
 }
 
-nav a {
-  @apply font-semibold text-lg;
+.btn-nav {
+  @apply p-3 py-2 rounded-md;
+}
+.btn-nav:hover {
+  @apply bg-neutral text-white;
+}
+.btn-nav.btn-nav-active {
+  @apply bg-neutral text-white;
+}
+.no-scroll {
+  @apply overflow-hidden sm:overflow-visible;
 }
 </style>
 
 <script setup lang="ts">
-import right from "../icon/right.vue";
-import { ref, defineEmits } from "vue";
+import RightIcon from "../icon/Right.vue";
+import { ref, defineEmits, watch, watchEffect } from "vue";
+
+const isActive = ref(false);
 const emit = defineEmits(["theme_mode"]);
 
-// State untuk toggle navigasi
-const isActive = ref(false);
+watchEffect(() => {
+  if (isActive.value) {
+    document.body.classList.add("no-scroll"); // Menambahkan class saat menu aktif
+  } else {
+    document.body.classList.remove("no-scroll"); // Menghapus class saat menu ditutup
+  }
+});
 
-// Fungsi toggle untuk memunculkan/menyembunyikan nav
 const togle = () => {
   isActive.value = !isActive.value;
-  console.log(isActive.value);
 };
-
-const mode = () => {};
 </script>
