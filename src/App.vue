@@ -8,8 +8,8 @@
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import Headers from "./components/layout/Header.vue";
-import Footers from "./components/layout/Footer.vue";
+import Headers from "@/components/layout/Header.vue";
+import Footers from "@/components/layout/Footer.vue";
 import { ref, watchEffect, onMounted, watch } from "vue";
 const theme = ref(localStorage.getItem("theme") || "light");
 

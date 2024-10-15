@@ -1,6 +1,6 @@
 <template>
   <header
-    class="w-full h-16 px-responsive flex items-center justify-between bg-base-100 border border-base-200 shadow-sm fixed z-20"
+    class="w-full h-16 px-responsive flex items-center justify-between bg-base-100/95 border border-base-200 shadow-sm fixed z-20"
   >
     <h1 class="text-2xl font-black">Logo</h1>
 
@@ -13,20 +13,20 @@
     >
       <div class="btn-nav btn-nav-active">
         <a href="" class=""> Home </a>
-        <RightIcon class="w-5 h-5 fill-current" />
+        <RightIcon class="" />
       </div>
 
       <div class="btn-nav">
         <a href="" class="">About </a>
-        <RightIcon class="w-5 h-5 fill-current" />
+        <RightIcon class="" />
       </div>
       <div class="btn-nav">
         <a href="" class="">Project </a>
-        <RightIcon class="w-5 h-5 fill-current flex" />
+        <RightIcon class=" " />
       </div>
       <div class="btn-nav">
         <a href="" class="">Contact </a>
-        <RightIcon class="w-5 h-5 fill-current" />
+        <RightIcon class="" />
       </div>
 
       <label class="grid cursor-pointer place-items-center">
@@ -89,7 +89,9 @@
       <div class="btn-nav">
         <a href="" class="">Contact </a>
       </div>
+
       <div class="w-[0.8px] h-8 rounded-sm bg-neutral"></div>
+
       <label class="grid cursor-pointer place-items-center">
         <input
           type="checkbox"
@@ -163,8 +165,8 @@
 
   <div
     :class="[
-      'bg-base-200/85 w-full h-screen fixed top-0 sm:hidden z-10 duration-75',
-      isActive ? 'flex' : 'hidden',
+      'bg-base-200/85 w-full h-screen fixed top-0 sm:hidden z-10',
+      isActive ? 'right-0' : '-right-full',
     ]"
     @click="togle"
   ></div>
@@ -196,7 +198,7 @@
 </style>
 
 <script setup lang="ts">
-import RightIcon from "../icon/Right.vue";
+import RightIcon from "@/components/icon/Right.vue";
 import { ref, defineEmits, watch, watchEffect } from "vue";
 
 const isActive = ref(false);

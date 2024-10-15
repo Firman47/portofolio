@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Home } from "@/components/pages";
+</script>
 
 <template>
-  <div class="h-screen"></div>
+  <Home />
 </template>
