@@ -1,13 +1,13 @@
 <template>
   <header
-    class="w-full h-16 px-responsive flex items-center justify-between bg-base-100/95 border border-base-200 shadow-sm fixed z-20"
+    class="w-full h-16 px-responsive flex items-center justify-between bg-base-100/95 fixed z-20"
   >
-    <h1 class="text-2xl font-black">Firman</h1>
+    <h1 class="text-2xl font-black">FIRMAN.</h1>
 
     <!-- mobile -->
     <nav
       :class="[
-        'z-20 mobile flex flex-col gap-4 w-60 p-4 sm:p-0 items-center justify-center  rounded-lg absolute bg-base-100 border border-base-200 shadow-md  top-20 transition-all duration-500 sm:w-auto sm:flex-row sm:static sm:bg-white/0 sm:hidden',
+        'z-20 mobile flex flex-col gap-4 w-60 p-4 sm:p-0 items-center justify-center  rounded-lg absolute bg-base-100 top-20 transition-all duration-500 sm:w-auto sm:flex-row sm:static sm:bg-white/0 sm:hidden',
         isActive ? 'right-4' : '-right-full',
       ]"
     >
@@ -165,8 +165,8 @@
 
   <div
     :class="[
-      'bg-base-200/85 w-full h-screen fixed top-0 sm:hidden z-10',
-      isActive ? 'right-0' : '-right-full',
+      'bg-base-300/50 w-full h-screen fixed top-0 sm:hidden z-10 transition-all duration-500',
+      isActive ? '' : 'opacity-0',
     ]"
     @click="togle"
   ></div>
