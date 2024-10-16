@@ -166,7 +166,7 @@
   <div
     :class="[
       'bg-base-300/50 w-full h-screen fixed top-0 sm:hidden z-10 transition-all duration-500',
-      isActive ? '' : 'opacity-0',
+      isActive ? '' : 'hidden',
     ]"
     @click="togle"
   ></div>
