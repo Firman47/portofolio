@@ -2,12 +2,8 @@
   <html>
     <Headers @theme_mode="theme_mode" />
     <RouterView />
+    <Cta />
     <Footers />
-
-    <div
-      class="fixed top-0 left-0 w-full h-screen -z-20 bg-gradient hidden"
-      :class="[theme == 'dracula' ? '' : 'hidden']"
-    ></div>
   </html>
 </template>
 <style>
@@ -35,9 +31,10 @@
 }
 </style>
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
 import Headers from "@/components/layout/Header.vue";
 import Footers from "@/components/layout/Footer.vue";
+import Cta from "./components/layout/Cta.vue";
+import { RouterLink, RouterView } from "vue-router";
 import { ref, watchEffect, onMounted, watch } from "vue";
 const theme = ref(localStorage.getItem("theme") || "dracula");
 

@@ -2,7 +2,7 @@
   <header
     class="w-full h-16 px-responsive flex items-center justify-between bg-base-100/95 fixed z-20"
   >
-    <h1 class="text-2xl font-black">FIRMAN.</h1>
+    <h1 class="text-2xl font-black text-primary">FIRMAN.</h1>
 
     <!-- mobile -->
     <nav
