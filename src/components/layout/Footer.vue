@@ -3,9 +3,7 @@
     <div class="h-52 badge-neutral rounded-xl w-full"></div>
   </section>
 
-  <footer
-    class="footer text-neutral-content items-center px-responsive relative py-16 text-current"
-  >
+  <footer class="footer items-center px-responsive relative py-16 text-current">
     <aside class="grid-flow-col items-center">
       <svg
         width="36"

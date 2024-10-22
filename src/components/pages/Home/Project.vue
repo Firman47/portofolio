@@ -5,8 +5,8 @@
       <p>Lorem, ipsum.</p>
     </div>
 
-    <div class="flex gap-4 justify-cente flex-col sm:flex-row">
-      <div class="card card-compact bg-base-200 w-full sm:w-96">
+    <div class="flex gap-4 justify-center flex-col sm:flex-row flex-wrap">
+      <div class="card card-compact bg-base-200 w-full sm:w-80">
         <figure>
           <img
             src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -42,7 +42,7 @@
         </div>
       </div>
 
-      <div class="card card-compact bg-base-200 w-full sm:w-96">
+      <div class="card card-compact bg-base-200 w-full sm:w-80">
         <figure>
           <img
             src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
@@ -78,7 +78,7 @@
         </div>
       </div>
 
-      <div class="card card-compact bg-base-200 ww-full sm:w-96">
+      <div class="card card-compact bg-base-200 w-full sm:w-80">
         <figure>
           <img
             src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
