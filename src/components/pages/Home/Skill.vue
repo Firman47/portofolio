@@ -1,5 +1,8 @@
 <template>
-  <section class="w-full px-responsive flex flex-col gap-8 items-start py-16">
+  <section
+    class="w-full px-responsive flex flex-col gap-8 items-start py-16"
+    id="skill"
+  >
     <div class="w-full flex flex-col justify-center text-center">
       <h1 class="text-3xl font-bold text-primary">Skill</h1>
       <p>Lorem, ipsum.</p>

@@ -12,20 +12,27 @@
       ]"
     >
       <div class="btn-nav btn-nav-active">
-        <a href="" class=""> Home </a>
+        <a href="/" class=""> Home </a>
         <RightIcon class="" />
       </div>
 
       <div class="btn-nav">
-        <a href="" class="">About </a>
+        <a href="#about" class="">About</a>
         <RightIcon class="" />
       </div>
+
       <div class="btn-nav">
-        <a href="" class="">Project </a>
+        <a href="#skill" class="">Skill </a>
+        <RightIcon class="" />
+      </div>
+
+      <div class="btn-nav">
+        <a href="#project" class="">Project </a>
         <RightIcon class=" " />
       </div>
+
       <div class="btn-nav">
-        <a href="" class="">Contact </a>
+        <a href="#news" class="">News </a>
         <RightIcon class="" />
       </div>
 
@@ -72,23 +79,40 @@
 
     <nav
       :class="[
-        ' flex-col gap-4 w-60 p-4 sm:p-0 items-center justify-center rounded-md absolute bg-base-200  top-20 transition-all duration-500 sm:w-auto sm:flex-row sm:static sm:bg-white/0 hidden sm:flex',
+        ' flex-col gap-8 w-60 font-medium p-4 sm:p-0 items-center justify-center rounded-md absolute bg-base-200  top-20 transition-all duration-500 sm:w-auto sm:flex-row sm:static sm:bg-white/0 hidden sm:flex ',
         isActive ? 'right-4' : '-right-full',
       ]"
     >
-      <div class="btn-nav btn-nav-active">
-        <a href="" class=""> Home </a>
-      </div>
+      <a
+        href="#home"
+        :class="['', activeSection === 'home' ? ' text-primary' : '']"
+      >
+        Home
+      </a>
 
-      <div class="btn-nav">
-        <a href="" class="">About </a>
-      </div>
-      <div class="btn-nav">
-        <a href="" class="">Project </a>
-      </div>
-      <div class="btn-nav">
-        <a href="" class="">Contact </a>
-      </div>
+      <a
+        href="#about"
+        :class="['', activeSection === 'about' ? ' text-primary' : '']"
+        >About
+      </a>
+
+      <a
+        href="#skill"
+        :class="['', activeSection === 'skill' ? ' text-primary' : '']"
+        >Skill
+      </a>
+
+      <a
+        href="#project"
+        :class="['', activeSection === 'project' ? ' text-primary' : '']"
+        >Project
+      </a>
+
+      <a
+        href="#news"
+        :class="['', activeSection === 'news' ? ' text-primary' : '']"
+        >News</a
+      >
 
       <div class="w-[0.8px] h-8 rounded-sm bg-neutral"></div>
 
@@ -199,7 +223,14 @@
 
 <script setup lang="ts">
 import RightIcon from "@/components/icon/Right.vue";
-import { ref, defineEmits, watch, watchEffect } from "vue";
+import {
+  ref,
+  defineEmits,
+  watch,
+  watchEffect,
+  onMounted,
+  onUnmounted,
+} from "vue";
 
 const isActive = ref(false);
 const emit = defineEmits(["theme_mode"]);
@@ -215,4 +246,29 @@ watchEffect(() => {
 const togle = () => {
   isActive.value = !isActive.value;
 };
+
+const activeSection: any = ref("home");
+
+const handleScroll = () => {
+  const sections = document.querySelectorAll("section");
+  let scrollPos = window.scrollY + window.innerHeight / 2;
+
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute("id");
+
+    if (scrollPos >= top && scrollPos < top + height) {
+      activeSection.value = id;
+    }
+  });
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>

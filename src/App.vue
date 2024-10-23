@@ -54,20 +54,7 @@ watch(theme, (newValue) => {
 // Set tema awal ketika komponen di-mount
 onMounted(() => {
   document.documentElement.setAttribute("data-theme", theme.value);
-});
-
-onMounted(() => {
-  var Tawk_API: any = Tawk_API || {},
-    Tawk_LoadStart = new Date();
-  (function () {
-    var s1 = document.createElement("script"),
-      s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = "https://embed.tawk.to/671724e32480f5b4f59112eb/1iap6g6qj";
-    s1.charset = "UTF-8";
-    s1.setAttribute("crossorigin", "*");
-    s0.parentNode.insertBefore(s1, s0);
-  })();
+  document.documentElement.classList.add("scroll-smooth");
 });
 </script>
 <!--Start of Tawk.to Script-->

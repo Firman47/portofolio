@@ -1,5 +1,5 @@
 <template>
-  <section class="px-responsive py-16 space-y-8">
+  <section class="px-responsive py-16 space-y-8" id="news">
     <div class="w-full flex flex-col justify-center text-center">
       <h1 class="text-3xl font-bold text-primary">News</h1>
       <p>Lorem, ipsum.</p>

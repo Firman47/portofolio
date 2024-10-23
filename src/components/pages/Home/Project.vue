@@ -1,11 +1,28 @@
 <template>
-  <section class="px-responsive py-16 space-y-8">
+  <section class="px-responsive py-16 space-y-8 w-full" id="project">
     <div class="w-full flex flex-col justify-center text-center">
       <h1 class="text-3xl font-bold text-primary">Project</h1>
       <p>Lorem, ipsum.</p>
     </div>
 
-    <div class="flex gap-4 justify-center flex-col sm:flex-row flex-wrap">
+    <div class="flex gap-4 justify-center flex-col flex-wrap w-full">
+      <div class="card lg:card-side bg-base-200">
+        <figure class="">
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+            alt="Album"
+            class="rounded-xl"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">New album is released!</h2>
+          <p>Click the button to listen on Spotiwhy app.</p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Listen</button>
+          </div>
+        </div>
+      </div>
+      <!-- 
       <div class="card card-compact bg-base-200 w-full sm:w-80">
         <figure>
           <img
@@ -40,79 +57,7 @@
             <button class="btn btn-primary">Watch</button>
           </div>
         </div>
-      </div>
-
-      <div class="card card-compact bg-base-200 w-full sm:w-80">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes"
-          />
-        </figure>
-
-        <div class="card-body">
-          <h1 class="card-title">Project1</h1>
-          <div class="scrollbar" id="style-4">
-            <div class="force-overflow"></div>
-          </div>
-          <div class="flex gap-2 flex-nowrap overflow-auto hide-scrollbar">
-            <div class="btn btn-sm btn-neutral">HTML</div>
-            <div class="btn btn-sm btn-neutral">HTML</div>
-            <div class="btn btn-sm btn-neutral">HTML</div>
-            <div class="btn btn-sm btn-neutral">HTML</div>
-            <div class="btn btn-sm btn-neutral">HTML</div>
-            <div class="btn btn-sm btn-neutral">HTML</div>
-          </div>
-
-          <p class="line-clamp-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
-            officiis iure molestias magni in voluptatem culpa nulla
-            exercitationem qui vel.
-          </p>
-
-          <div class="card-actions justify-end flex">
-            <button class="btn btn-neutral">Watch</button>
-
-            <button class="btn btn-primary">Watch</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-compact bg-base-200 w-full sm:w-80">
-        <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="Shoes"
-          />
-        </figure>
-
-        <div class="card-body">
-          <h1 class="card-title">Project1</h1>
-          <div class="scrollbar" id="style-4">
-            <div class="force-overflow"></div>
-          </div>
-          <div class="flex gap-2 flex-nowrap overflow-auto hide-scrollbar">
-            <div class="btn btn-sm btn-neutral">HTML</div>
-            <div class="btn btn-sm btn-neutral">HTML</div>
-            <div class="btn btn-sm btn-neutral">HTML</div>
-            <div class="btn btn-sm btn-neutral">HTML</div>
-            <div class="btn btn-sm btn-neutral">HTML</div>
-            <div class="btn btn-sm btn-neutral">HTML</div>
-          </div>
-
-          <p class="line-clamp-3">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
-            officiis iure molestias magni in voluptatem culpa nulla
-            exercitationem qui vel.
-          </p>
-
-          <div class="card-actions justify-end flex">
-            <button class="btn btn-neutral">Watch</button>
-
-            <button class="btn btn-primary">Watch</button>
-          </div>
-        </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
