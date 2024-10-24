@@ -7,20 +7,35 @@
 
     <div class="flex gap-4 justify-center flex-col flex-wrap w-full">
       <div class="card lg:card-side bg-base-200">
+        <div class="card-body flex-row gap-16 items-center justify-center">
+          <div class="space-y-6">
+            <div class="w-3 h-3 rounded-full bg-primary"></div>
+            <div class="w-3 h-3 rounded-full bg-neutral"></div>
+            <div class="w-3 h-3 rounded-full bg-neutral"></div>
+          </div>
+
+          <div class="flex flex-col justify-center gap-8 max-w-[500px]">
+            <h2 class="card-title text-4xl">New album is released!</h2>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+              beatae similique perferendis hic veritatis quidem harum! Tempore
+              hic voluptate magni?.
+            </p>
+
+            <div class="card-actions">
+              <button class="btn btn-primary">Listen</button>
+            </div>
+          </div>
+        </div>
+
         <figure class="">
           <img
             src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
             alt="Album"
-            class="rounded-xl"
+            class=""
           />
         </figure>
-        <div class="card-body">
-          <h2 class="card-title">New album is released!</h2>
-          <p>Click the button to listen on Spotiwhy app.</p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Listen</button>
-          </div>
-        </div>
       </div>
       <!-- 
       <div class="card card-compact bg-base-200 w-full sm:w-80">
