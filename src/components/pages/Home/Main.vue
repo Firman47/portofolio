@@ -15,6 +15,5 @@ import About from "./About.vue";
 import Project from "./Project.vue";
 import News from "./News.vue";
 import { ref } from "vue";
-
 const tab = ref("skil");
 </script>
