@@ -1,12 +1,16 @@
 <template>
-  <section class="px-responsive py-16 space-y-8" id="news">
-    <div class="w-full flex flex-col justify-center text-center">
+  <section class="px-responsive py-16 space-y-8" id="news" data-aos="zoom-in">
+    <div
+      class="w-full flex flex-col justify-center text-center"
+      data-aos="zoom-in-up"
+    >
       <h1 class="text-3xl font-bold text-primary">News</h1>
       <p>Lorem, ipsum.</p>
     </div>
 
     <div
-      class="flex gap-4 justify-center flex-col sm:flex-row flex-wrap w-full"
+      data-aos="zoom-in"
+      class="flex gap-4 justify-center flex-col sm:flex-row flex-wrap w-full *:"
     >
       <Card3
         img="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"

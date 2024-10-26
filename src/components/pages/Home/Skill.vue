@@ -2,6 +2,7 @@
   <section
     class="w-full px-responsive flex flex-col gap-8 items-start py-16"
     id="skill"
+    data-aos="zoom-in-up"
   >
     <div class="w-full flex flex-col justify-center text-center">
       <h1 class="text-3xl font-bold text-primary">Skill</h1>
@@ -10,6 +11,7 @@
 
     <div
       class="flex gap-2 max-w-[500px] m-auto flex-wrap justify-center items-center"
+      data-aos="zoom-in-up"
     >
       <Card2 title="HTML" />
       <Card2 title="CSS" />

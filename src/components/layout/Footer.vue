@@ -1,6 +1,15 @@
 <template>
-  <section class="w-full px-responsive py-16">
-    <div class="h-52 badge-neutral rounded-xl w-full"></div>
+  <section class="w-full py-16 px-responsive" data-aos="fade-up">
+    <div
+      class="bg-base-200 rounded-xl px-12 py-8 flex flex-col gap-4 justify-between items-center border border-base-300"
+    >
+      <h1 class="text-3xl font-bold">Lorem ipsum dolor sit amet.</h1>
+      <p class="max-w-[580px]">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quos
+        consequatur repudiandae vel reiciendis ratione obcaecati? Rem, suscipit.
+      </p>
+      <button class="btn btn-primary">Submit</button>
+    </div>
   </section>
 
   <footer class="footer items-center px-responsive relative py-16 text-current">
@@ -30,5 +39,6 @@
 </template>
 
 <script setup lang="ts">
+import Buttons from "primevue/button";
 import { Facebook, Twitter, Youtube } from "../icon/index";
 </script>

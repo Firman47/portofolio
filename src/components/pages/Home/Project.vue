@@ -1,12 +1,18 @@
 <template>
   <section class="px-responsive py-16 space-y-8 w-full" id="project">
-    <div class="w-full flex flex-col justify-center text-center">
+    <div
+      class="w-full flex flex-col justify-center text-center"
+      data-aos="zoom-in-up"
+    >
       <h1 class="text-3xl font-bold text-primary">Project</h1>
       <p>Lorem, ipsum.</p>
     </div>
 
-    <div class="flex gap-4 justify-center flex-col flex-wrap w-full">
-      <div class="card lg:card-side bg-base-200">
+    <div
+      class="flex gap-4 justify-center flex-col flex-wrap w-full"
+      data-aos="zoom-in-up"
+    >
+      <div class="card lg:card-side bg-base-200" v-for="item in projects.data">
         <div class="card-body flex-row gap-16 items-center justify-center">
           <div class="space-y-6">
             <div class="w-3 h-3 rounded-full bg-primary"></div>
@@ -15,12 +21,10 @@
           </div>
 
           <div class="flex flex-col justify-center gap-8 max-w-[500px]">
-            <h2 class="card-title text-4xl">New album is released!</h2>
+            <h2 class="card-title text-4xl">{{ item.name }}</h2>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-              beatae similique perferendis hic veritatis quidem harum! Tempore
-              hic voluptate magni?.
+              {{ item.description }}
             </p>
 
             <div class="card-actions">
@@ -80,6 +84,24 @@
 <script setup lang="ts">
 import { Card2 } from "@/components/ui";
 import { RightArrow, MenuDots } from "@/components/icon";
+import { onMounted, ref } from "vue";
+import axios from "axios";
+
+const projects: any = ref([]);
+
+const fetchProjects = async () => {
+  try {
+    const response = await axios.get("http://localhost:3000/project");
+    projects.value = response.data;
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+  }
+};
+
+// Panggil fetchProjects saat komponen dipasang (mounted)
+onMounted(() => {
+  fetchProjects();
+});
 </script>
 
 <style>

@@ -36,6 +36,7 @@ import Footers from "@/components/layout/Footer.vue";
 import Cta from "./components/layout/Cta.vue";
 import { RouterLink, RouterView } from "vue-router";
 import { ref, watchEffect, onMounted, watch } from "vue";
+
 const theme = ref(localStorage.getItem("theme") || "dracula");
 
 const theme_mode = () => {

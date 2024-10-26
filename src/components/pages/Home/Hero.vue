@@ -1,7 +1,8 @@
 <template>
   <section
-    class="max-w-[580px] px-4 sm:px-0 px-responsive m-auto text-center w-full flex flex-col items-center justify-center gap-6 pt-24 pb-9 sm:pt-16 sm:h-screen box-border"
+    class="max-w-[580px] px-4 sm:px-0 px-responsive m-auto text-center w-full flex flex-col items-center justify-center gap-6 py-24 box-border"
     id="home"
+    data-aos="zoom-in-up"
   >
     <div
       class="flex w-fit items-center justify-center gap-2 px-8 py-2 b bg-base-200 rounded-full"
@@ -52,3 +53,7 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+</script>

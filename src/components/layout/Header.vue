@@ -11,30 +11,30 @@
         isActive ? 'right-4' : '-right-full',
       ]"
     >
-      <div class="btn-nav btn-nav-active">
-        <a href="/" class=""> Home </a>
+      <a
+        href="#home"
+        :class="['btn-nav', activeSection === 'home' ? ' btn-nav-active' : '']"
+        >Home
         <RightIcon class="" />
-      </div>
-
-      <div class="btn-nav">
-        <a href="#about" class="">About</a>
+      </a>
+      <a
+        href="#about"
+        :class="['btn-nav', activeSection === 'about' ? ' btn-nav-active' : '']"
+        >About
         <RightIcon class="" />
-      </div>
-
-      <div class="btn-nav">
-        <a href="#skill" class="">Skill </a>
+      </a>
+      <a
+        href="#skill"
+        :class="['btn-nav', activeSection === 'skill' ? ' btn-nav-active' : '']"
+        >Skill
         <RightIcon class="" />
-      </div>
-
-      <div class="btn-nav">
-        <a href="#project" class="">Project </a>
-        <RightIcon class=" " />
-      </div>
-
-      <div class="btn-nav">
-        <a href="#news" class="">News </a>
+      </a>
+      <a
+        href="#news"
+        :class="['btn-nav', activeSection === 'news' ? 'btn-nav-active' : '']"
+        >News
         <RightIcon class="" />
-      </div>
+      </a>
 
       <label class="grid cursor-pointer place-items-center">
         <input
@@ -102,11 +102,11 @@
         >Skill
       </a>
 
-      <a
+      <!-- <a
         href="#project"
         :class="['', activeSection === 'project' ? ' text-primary' : '']"
         >Project
-      </a>
+      </a> -->
 
       <a
         href="#news"

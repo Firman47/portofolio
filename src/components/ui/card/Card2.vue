@@ -1,5 +1,5 @@
 <template>
-  <div class="px-8 py-2 bg-base-200 border border-base-300 rounded-lg">
+  <div class="px-4 sm:px-8 py-2 bg-base-200 border border-base-300 rounded-lg">
     {{ title }}
   </div>
 </template>
