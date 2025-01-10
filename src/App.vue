@@ -36,6 +36,7 @@ import Footers from "@/components/layout/Footer.vue";
 import Cta from "./components/layout/Cta.vue";
 import { RouterLink, RouterView } from "vue-router";
 import { ref, watchEffect, onMounted, watch } from "vue";
+// import AOS from "aos/dist/aos.js";
 
 const theme = ref(localStorage.getItem("theme") || "dracula");
 
@@ -53,7 +54,7 @@ watch(theme, (newValue) => {
 });
 
 // Set tema awal ketika komponen di-mount
-onMounted(() => {
+onMounted(async () => {
   document.documentElement.setAttribute("data-theme", theme.value);
   document.documentElement.classList.add("scroll-smooth");
 });

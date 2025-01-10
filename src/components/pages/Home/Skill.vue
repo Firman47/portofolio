@@ -2,16 +2,26 @@
   <section
     class="w-full px-responsive flex flex-col gap-8 items-start py-16"
     id="skill"
-    data-aos="zoom-in-up"
   >
-    <div class="w-full flex flex-col justify-center text-center">
+    <div
+      class="w-full flex flex-col justify-center text-center"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-once="false"
+    >
       <h1 class="text-3xl font-bold text-primary">Skill</h1>
       <p>Lorem, ipsum.</p>
     </div>
 
     <div
       class="flex gap-2 max-w-[500px] m-auto flex-wrap justify-center items-center"
-      data-aos="zoom-in-up"
+      data-aos="zoom-in"
+      data-aos-offset="200"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-once="false"
     >
       <Card2 title="HTML" />
       <Card2 title="CSS" />

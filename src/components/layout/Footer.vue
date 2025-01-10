@@ -1,5 +1,11 @@
 <template>
-  <section class="w-full py-16 px-responsive" data-aos="fade-up">
+  <section
+    class="w-full py-16 px-responsive"
+    data-aos="fade-up"
+    data-aos-duration="800"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-out"
+  >
     <div
       class="bg-base-200 rounded-xl px-12 py-8 flex flex-col gap-4 justify-between items-center border border-base-300"
     >

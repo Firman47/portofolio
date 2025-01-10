@@ -3,7 +3,7 @@
     <Hero />
     <About />
     <Skill />
-    <!-- <Project /> -->
+    <Project />
     <News />
   </main>
 </template>
